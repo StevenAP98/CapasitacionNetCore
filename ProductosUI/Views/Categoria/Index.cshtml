@@ -1,0 +1,64 @@
+﻿
+<script src="http://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js" defer></script>
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" defer></script>
+    <script type="text/javascript" src="~/js/Categorias.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+
+<div id="divMensajeExitoso" class="alert alert-success" role="alert" style="display: none;">
+    <p id="pMensajeExitoso"></p>
+</div>
+
+<div>
+    <h1 class="text-center display-4">Lista de categorías</h1>
+</div>
+
+<div style=" margin-right: 50%; margin-top: 4%; margin-bottom: 4%;" id="divInsertarCategoria" class="ml">
+    <div>
+        <h5 class="display-8">Insertar Categoría</h5>
+    </div>
+    <input hidden type="text" class="form-control" id="txtIdCategoria">
+    <div class="form-group">
+        <label for="usr">Nombre Categoría:</label>
+        <input type="text" class="form-control" id="txtNombreCategoria">
+        <p id="pValidacion" style="color:red" hidden>Debe de ingresar el nombre de categoría</p>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="checkEstado">
+        <label class="form-check-label" for="checkEstado">
+            Activo
+        </label>
+    </div>
+    <div style="margin-top: 4%; margin-bottom: 4%;" class="form-group">
+        <button id="btnInsertarCategoria" type="button" class="btn btn-success">Agregar Categoría</button>
+    </div>
+    <div style="margin-top: 4%; margin-bottom: 4%;" class="form-group">
+        <button id="btnEditarCategoria" type="button" class="btn btn-success" hidden>Editar categoría</button>
+        <button id="btnCancelarEditarCategoria" type="button" class="btn btn-warning" hidden>Cancelar</button>
+    </div>
+
+</div>
+<hr />
+
+<div class="text-center">
+
+    <table id="tblCategoria" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre Categoría</th>
+                <th>Activa</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyCategoria">
+        </tbody>
+    </table>
+</div>
+
+
